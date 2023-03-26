@@ -12,6 +12,7 @@ var inputOk = 0
 
 class ViewController: NSViewController {
 
+    @IBOutlet weak var cpuFanSpeedLevel: NSTextField!
     @IBOutlet weak var autoBtn: NSSwitch!
     @IBOutlet weak var fan0: NSTextField!
     @IBOutlet weak var fan1: NSTextField!
@@ -24,6 +25,7 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        cpuFanSpeedLevel.stringValue = NSLocalizedString("CPU风扇档位", comment: "")
         fan0.stringValue = "20"
         fan1.stringValue = "30"
         fan2.stringValue = "40"
@@ -36,6 +38,7 @@ class ViewController: NSViewController {
         fan3.isEnabled = false
         fan4.isEnabled = false
         fan5.isEnabled = false
+        enterBtn.title = NSLocalizedString("确认", comment: "")
 
         // Do any additional setup after loading the view.
     }
@@ -95,7 +98,7 @@ class ViewController: NSViewController {
             showMsg(msg:shellTask([d0, d1, d2, d3, d4, d5]))
         }
         else {
-            showMsg(msg:"请输入0~100数字!")
+            showMsg(msg:NSLocalizedString("请输入0~100数字!", comment: ""))
         }
     }
 
@@ -121,7 +124,7 @@ class ViewController: NSViewController {
     func shellTask(_ args: [String]) -> String {
         let task = Process()
         guard let path = Bundle.main.path(forResource: "MSIECControl",ofType:"") else {
-            return "失败!\nMSIECControl 丢失!"
+            return NSLocalizedString("失败!\nMSIECControl 丢失!", comment: "")
         }
         task.launchPath = path
         task.arguments = args

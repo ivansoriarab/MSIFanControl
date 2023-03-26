@@ -12,10 +12,11 @@
 		AE4932AD23C1887400121D2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4932AC23C1887400121D2B /* AppDelegate.swift */; };
 		AE4932AF23C1887400121D2B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4932AE23C1887400121D2B /* ViewController.swift */; };
 		AE4932B123C1887800121D2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE4932B023C1887800121D2B /* Assets.xcassets */; };
-		AE4932C223C18B6400121D2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE4932C023C18B6400121D2B /* Main.storyboard */; };
 		AEF25A8323C8673300C9C29C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AEF25A8123C8673300C9C29C /* main.cpp */; };
 		AEF25A8823C8812A00C9C29C /* MSIECControl.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF25A8723C8812A00C9C29C /* MSIECControl.h */; };
 		AEF25A8923C88C4C00C9C29C /* MSIECControl in Resources */ = {isa = PBXBuildFile; fileRef = AEF25A7A23C866F500C9C29C /* MSIECControl */; };
+		B748794229D0759C002AD4F7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B748794429D0759C002AD4F7 /* Localizable.strings */; };
+		B748794C29D078EB002AD4F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B748794A29D078EB002AD4F7 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,10 +59,12 @@
 		AE4932B023C1887800121D2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE4932B523C1887800121D2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE4932B623C1887800121D2B /* MSIFanControl.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MSIFanControl.entitlements; sourceTree = "<group>"; };
-		AE4932C123C18B6400121D2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AEF25A7A23C866F500C9C29C /* MSIECControl */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MSIECControl; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEF25A8123C8673300C9C29C /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		AEF25A8723C8812A00C9C29C /* MSIECControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSIECControl.h; sourceTree = "<group>"; };
+		B748794329D0759C002AD4F7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B748794529D075FC002AD4F7 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B748794B29D078EB002AD4F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,12 +125,13 @@
 		AE4932AB23C1887400121D2B /* MSIFanControl */ = {
 			isa = PBXGroup;
 			children = (
-				AE4932C023C18B6400121D2B /* Main.storyboard */,
+				B748794A29D078EB002AD4F7 /* Main.storyboard */,
 				AE4932AC23C1887400121D2B /* AppDelegate.swift */,
 				AE4932AE23C1887400121D2B /* ViewController.swift */,
 				AE4932B023C1887800121D2B /* Assets.xcassets */,
 				AE4932B523C1887800121D2B /* Info.plist */,
 				AE4932B623C1887800121D2B /* MSIFanControl.entitlements */,
+				B748794429D0759C002AD4F7 /* Localizable.strings */,
 			);
 			path = MSIFanControl;
 			sourceTree = "<group>";
@@ -234,10 +238,12 @@
 			};
 			buildConfigurationList = 5214FD98230FF31800E33053 /* Build configuration list for PBXProject "MSIFanControl" */;
 			compatibilityVersion = "Xcode 9.3";
-			developmentRegion = en;
+			developmentRegion = "zh-Hans";
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				es,
+				"zh-Hans",
 				Base,
 			);
 			mainGroup = 5214FD94230FF31800E33053;
@@ -265,8 +271,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEF25A8923C88C4C00C9C29C /* MSIECControl in Resources */,
+				B748794229D0759C002AD4F7 /* Localizable.strings in Resources */,
 				AE4932B123C1887800121D2B /* Assets.xcassets in Resources */,
-				AE4932C223C18B6400121D2B /* Main.storyboard in Resources */,
+				B748794C29D078EB002AD4F7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,10 +321,19 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		AE4932C023C18B6400121D2B /* Main.storyboard */ = {
+		B748794429D0759C002AD4F7 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				AE4932C123C18B6400121D2B /* Base */,
+				B748794329D0759C002AD4F7 /* en */,
+				B748794529D075FC002AD4F7 /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		B748794A29D078EB002AD4F7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B748794B29D078EB002AD4F7 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -329,6 +345,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -388,6 +405,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
