@@ -14,7 +14,9 @@
 "最小化" = "Minimizar";
 "缩放" = "Zoom";
 "将所有窗口置于顶层" = "Traer todo al frente";
-"CPU风扇档位" = "Configuración de la velocidad del ventilador de la CPU";
+"切换风扇控制" = "%@ el control del ventilador";
+"启用" = "Activar";
+"禁用" = "Desactivar";
 "确认" = "Aplicar";
 "请输入0~100数字!" = "Por favor introduzca un número entre 0 y 100";
 "失败!\nMSIECControl 丢失!" = "¡Error!\n ¡No se ha podido encontrar MSIECControl!";

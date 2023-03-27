@@ -14,7 +14,9 @@
 "最小化" = "Minimize";
 "缩放" = "Zoom";
 "将所有窗口置于顶层" = "Bring All to Front";
-"CPU风扇档位" = "CPU fan speed level";
+"切换风扇控制" = "%@ fan control";
+"启用" = "Enable";
+"禁用" = "Disable";
 "确认" = "Apply";
 "请输入0~100数字!" = "Please enter a number between 0 and 100!";
 "失败!\nMSIECControl 丢失!" = "Error!\n MSIECControl is missing!";

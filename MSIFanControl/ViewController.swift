@@ -12,7 +12,7 @@ var inputOk = 0
 
 class ViewController: NSViewController {
 
-    @IBOutlet weak var cpuFanSpeedLevel: NSTextField!
+    @IBOutlet weak var toggleFanControlLabel: NSTextField!
     @IBOutlet weak var autoBtn: NSSwitch!
     @IBOutlet weak var fan0: NSTextField!
     @IBOutlet weak var fan1: NSTextField!
@@ -25,53 +25,23 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        cpuFanSpeedLevel.stringValue = NSLocalizedString("CPU风扇档位", comment: "")
-        fan0.stringValue = "20"
-        fan1.stringValue = "30"
-        fan2.stringValue = "40"
-        fan3.stringValue = "60"
-        fan4.stringValue = "80"
-        fan5.stringValue = "100"
-        fan0.isEnabled = false
-        fan1.isEnabled = false
-        fan2.isEnabled = false
-        fan3.isEnabled = false
-        fan4.isEnabled = false
-        fan5.isEnabled = false
+        toggleFanControlLabel.stringValue = String(format: NSLocalizedString("切换风扇控制", comment: ""), NSLocalizedString("启用", comment: ""))
         enterBtn.title = NSLocalizedString("确认", comment: "")
-
-        // Do any additional setup after loading the view.
     }
     
     // 判断开关并恢复初始值
     @IBAction func autoBtn(_ sender: Any) {
         if (autoBtn.state.rawValue == 1) {
-            fan0.isEnabled = true
-            fan1.isEnabled = true
-            fan2.isEnabled = true
-            fan3.isEnabled = true
-            fan4.isEnabled = true
-            fan5.isEnabled = true
-            fan0.stringValue = ""
-            fan1.stringValue = ""
-            fan2.stringValue = ""
-            fan3.stringValue = ""
-            fan4.stringValue = ""
-            fan5.stringValue = ""
+            toggleFanControlLabel.stringValue = String(format: NSLocalizedString("切换风扇控制", comment: ""), NSLocalizedString("禁用", comment: ""))
+            fan0.isEditable = true
+            fan1.isEditable = true
+            fan2.isEditable = true
+            fan3.isEditable = true
+            fan4.isEditable = true
+            fan5.isEditable = true
         }
         else {
-            fan0.stringValue = "20"
-            fan1.stringValue = "30"
-            fan2.stringValue = "40"
-            fan3.stringValue = "60"
-            fan4.stringValue = "80"
-            fan5.stringValue = "100"
-            fan0.isEnabled = false
-            fan1.isEnabled = false
-            fan2.isEnabled = false
-            fan3.isEnabled = false
-            fan4.isEnabled = false
-            fan5.isEnabled = false
+            toggleFanControlLabel.stringValue = String(format: NSLocalizedString("切换风扇控制", comment: ""), NSLocalizedString("启用", comment: ""))
         }
     }
 

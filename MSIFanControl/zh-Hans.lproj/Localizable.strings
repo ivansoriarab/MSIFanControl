@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  MSIFanControl
+
+  Created by Ivan Soriano Arabia on 26/3/23.
+  Copyright © 2023 lgs3137. All rights reserved.
+*/
+
+"切换风扇控制" = "%@风扇控制";
