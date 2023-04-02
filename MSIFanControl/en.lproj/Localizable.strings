@@ -2,21 +2,19 @@
   Localizable.strings
   MSIFanControl
 
-  Created by Ivan Soriano Arabia on 26/3/23.
-  Copyright © 2023 lgs3137. All rights reserved.
+  Created by ivansoriarab on 26/3/23.
+  Copyright © 2020 - 2023: lgs3137 - ivansoriarab.
 */
-"关于MSIFanControl" = "About MSIFanControl";
-"隐藏MSIFanControl" = "Hide MSIFanControl";
+"关于 MSI Fan Control" = "About MSI Fan Control";
+"隐藏 MSI Fan Control" = "Hide MSI Fan Control";
 "隐藏其他" = "Hide Others";
 "显示全部" = "Show All";
-"退出MSIFanControl" = "Quit MSIFanControl";
+"退出 MSI Fan Control" = "Quit MSI Fan Control";
 "窗口" = "Window";
 "最小化" = "Minimize";
 "缩放" = "Zoom";
 "将所有窗口置于顶层" = "Bring All to Front";
-"切换风扇控制" = "%@ fan control";
-"启用" = "Enable";
-"禁用" = "Disable";
+"设置风扇速度" = "Set fan speed";
 "确认" = "Apply";
 "请输入0~100数字!" = "Please enter a number between 0 and 100!";
 "失败!\nMSIECControl 丢失!" = "Error!\n MSIECControl is missing!";

@@ -3,7 +3,8 @@
 //  MSIFanControl
 //
 //  Created by lgs3137 on 2020/1/3.
-//  Copyright © 2020 none. All rights reserved.
+//  Updated by ivansoriarab on 2023/4/2.
+//  Copyright © 2020 - 2023: lgs3137 - ivansoriarab.
 //
 
 #include <iostream>
@@ -38,7 +39,13 @@ void sendctl(struct MSIECControl ctrl) {
 
 int main(int argc, char* argv[]) {
     if (argc != 7) {
-        printf("正确使用:\n%s 20 30 40 60 80 100\n", argv[0]);
+        printf("👎 %s", argv[0]);
+        
+        for (int i = 1; i < argc; i++) {
+            printf(" %s", argv[i]);
+        }
+        
+        printf("\n👍 %s 20 30 40 60 80 100\n", argv[0]);
     }
     else {
         struct MSIECControl ctrl;

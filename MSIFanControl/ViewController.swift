@@ -3,7 +3,8 @@
 //  MSIFanControl
 //
 //  Created by lgs3137 on 2020/1/5.
-//  Copyright © 2020 none. All rights reserved.
+//  Updated by ivansoriarab on 2023/4/2.
+//  Copyright © 2020 - 2023: lgs3137 - ivansoriarab.
 //
 
 import Cocoa
@@ -12,7 +13,7 @@ var inputOk = 0
 
 class ViewController: NSViewController {
 
-    @IBOutlet weak var toggleFanControlLabel: NSTextField!
+    @IBOutlet weak var toggleLbl: NSTextField!
     @IBOutlet weak var autoBtn: NSSwitch!
     @IBOutlet weak var fan0: NSTextField!
     @IBOutlet weak var fan1: NSTextField!
@@ -25,28 +26,28 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        toggleFanControlLabel.stringValue = String(format: NSLocalizedString("切换风扇控制", comment: ""), NSLocalizedString("启用", comment: ""))
-        enterBtn.title = NSLocalizedString("确认", comment: "")
+        toggleLbl.stringValue = NSLocalizedString("设置风扇速度", comment: "Label that appears next to a switch, which allows the user to set a custom fan speed when it is turned on")
+        enterBtn.title = NSLocalizedString("确认", comment: "Button that confirms the user's action")
     }
     
-    // 判断开关并恢复初始值
+    // Determines the switch status and enables or disables the fan inputs accordingly.
+    // When the switch is off, the default speed values are set.
     @IBAction func autoBtn(_ sender: Any) {
-        if (autoBtn.state.rawValue == 1) {
-            toggleFanControlLabel.stringValue = String(format: NSLocalizedString("切换风扇控制", comment: ""), NSLocalizedString("禁用", comment: ""))
-            fan0.isEditable = true
-            fan1.isEditable = true
-            fan2.isEditable = true
-            fan3.isEditable = true
-            fan4.isEditable = true
-            fan5.isEditable = true
-        }
-        else {
-            toggleFanControlLabel.stringValue = String(format: NSLocalizedString("切换风扇控制", comment: ""), NSLocalizedString("启用", comment: ""))
+        fan0.isEnabled = (autoBtn.state.rawValue == 1)
+        fan1.isEnabled = (autoBtn.state.rawValue == 1)
+        fan2.isEnabled = (autoBtn.state.rawValue == 1)
+        fan3.isEnabled = (autoBtn.state.rawValue == 1)
+        fan4.isEnabled = (autoBtn.state.rawValue == 1)
+        fan5.isEnabled = (autoBtn.state.rawValue == 1)
+        enterBtn.isEnabled = (autoBtn.state.rawValue == 1)
+        
+        if (autoBtn.state.rawValue == 0) {
+            showMsg(msg:shellTask(["20", "30", "40", "60", "80", "100"]))
         }
     }
 
     @IBAction func enterBtn(_ sender: Any) {
-        // 简单判断输入
+        // Input verification
         inputOk = 0
         checkInput(inputs: fan0.stringValue)
         checkInput(inputs: fan1.stringValue)
@@ -55,7 +56,7 @@ class ViewController: NSViewController {
         checkInput(inputs: fan4.stringValue)
         checkInput(inputs: fan5.stringValue)
 
-        // 转换格式
+        // Format conversion
         let d0 = String((fan0.stringValue as NSString).integerValue)
         let d1 = String((fan1.stringValue as NSString).integerValue)
         let d2 = String((fan2.stringValue as NSString).integerValue)
@@ -63,16 +64,16 @@ class ViewController: NSViewController {
         let d4 = String((fan4.stringValue as NSString).integerValue)
         let d5 = String((fan5.stringValue as NSString).integerValue)
 
-        // 判断并执行
+        // Sets the speed or displays a pop-up if the values are invalid.
         if (inputOk == 6) {
             showMsg(msg:shellTask([d0, d1, d2, d3, d4, d5]))
         }
         else {
-            showMsg(msg:NSLocalizedString("请输入0~100数字!", comment: ""))
+            showMsg(msg:NSLocalizedString("请输入0~100数字!", comment: "Warning message indicating that the user must enter a number between 0 and 100"))
         }
     }
 
-    // 简单校验输入是否符合0~100
+    // Validation to ensure that the input value is between 0 and 100.
     func checkInput(inputs:String) {
         let input = (inputs as NSString).integerValue
         if (0 <= input && input <= 100) {
@@ -80,21 +81,19 @@ class ViewController: NSViewController {
         }
     }
 
-    // 弹窗
     func showMsg(msg:String) {
         let alert = NSAlert()
-        alert.messageText = "MSIFanControl"
+        alert.messageText = "MSI Fan Control"
         alert.informativeText = msg
         alert.alertStyle = .critical
         alert.addButton(withTitle: "OK")
         alert.runModal()
     }
 
-    // 执行Shell命令
     func shellTask(_ args: [String]) -> String {
         let task = Process()
-        guard let path = Bundle.main.path(forResource: "MSIECControl",ofType:"") else {
-            return NSLocalizedString("失败!\nMSIECControl 丢失!", comment: "")
+        guard let path = Bundle.main.path(forResource: "MSIECControl", ofType:"") else {
+            return NSLocalizedString("失败!\nMSIECControl 丢失!", comment: "Error message displayed when MSIECControl fails to load correctly")
         }
         task.launchPath = path
         task.arguments = args

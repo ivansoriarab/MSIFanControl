@@ -12,11 +12,11 @@
 		AE4932AD23C1887400121D2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4932AC23C1887400121D2B /* AppDelegate.swift */; };
 		AE4932AF23C1887400121D2B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4932AE23C1887400121D2B /* ViewController.swift */; };
 		AE4932B123C1887800121D2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE4932B023C1887800121D2B /* Assets.xcassets */; };
-		AEF25A8323C8673300C9C29C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AEF25A8123C8673300C9C29C /* main.cpp */; };
 		AEF25A8823C8812A00C9C29C /* MSIECControl.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF25A8723C8812A00C9C29C /* MSIECControl.h */; };
 		AEF25A8923C88C4C00C9C29C /* MSIECControl in Resources */ = {isa = PBXBuildFile; fileRef = AEF25A7A23C866F500C9C29C /* MSIECControl */; };
 		B748794229D0759C002AD4F7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B748794429D0759C002AD4F7 /* Localizable.strings */; };
 		B748794C29D078EB002AD4F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B748794A29D078EB002AD4F7 /* Main.storyboard */; };
+		B74F9D2A29D8876200939BB6 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AEF25A8123C8673300C9C29C /* main.cpp */; };
 		B759632129D2033100F37590 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B759632029D2033100F37590 /* Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -54,7 +54,7 @@
 		5214FDA9230FF3A100E33053 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5214FDAA230FF3A100E33053 /* MSIFanService.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MSIFanService.cpp; sourceTree = "<group>"; };
 		5214FDAB230FF3A200E33053 /* MSIFanService.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MSIFanService.hpp; sourceTree = "<group>"; };
-		AE4932AA23C1887400121D2B /* MSIFanControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MSIFanControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE4932AA23C1887400121D2B /* MSI Fan Control.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MSI Fan Control.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE4932AC23C1887400121D2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE4932AE23C1887400121D2B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AE4932B023C1887800121D2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -65,7 +65,6 @@
 		B748794329D0759C002AD4F7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B748794529D075FC002AD4F7 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B748794B29D078EB002AD4F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B759630D29D1F5E400F37590 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		B759632029D2033100F37590 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,7 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				5214FD9E230FF31800E33053 /* MSIFanService.kext */,
-				AE4932AA23C1887400121D2B /* MSIFanControl.app */,
+				AE4932AA23C1887400121D2B /* MSI Fan Control.app */,
 				AEF25A7A23C866F500C9C29C /* MSIECControl */,
 			);
 			name = Products;
@@ -196,7 +195,7 @@
 			);
 			name = MSIFanControl;
 			productName = MSIFanControl;
-			productReference = AE4932AA23C1887400121D2B /* MSIFanControl.app */;
+			productReference = AE4932AA23C1887400121D2B /* MSI Fan Control.app */;
 			productType = "com.apple.product-type.application";
 		};
 		AEF25A7923C866F500C9C29C /* MSIECControl */ = {
@@ -304,7 +303,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AEF25A8323C8673300C9C29C /* main.cpp in Sources */,
+				B74F9D2A29D8876200939BB6 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,7 +328,6 @@
 			children = (
 				B748794329D0759C002AD4F7 /* en */,
 				B748794529D075FC002AD4F7 /* es */,
-				B759630D29D1F5E400F37590 /* zh-Hans */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -503,6 +501,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = MSIFanControl/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MSIFanControl;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -512,7 +511,7 @@
 					"$(PROJECT_DIR)/MSIFanControl",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.lgs3137.MSIFanControl;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "MSI Fan Control";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -533,6 +532,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = MSIFanControl/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MSIFanControl;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -542,7 +542,7 @@
 					"$(PROJECT_DIR)/MSIFanControl",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.lgs3137.MSIFanControl;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "MSI Fan Control";
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
