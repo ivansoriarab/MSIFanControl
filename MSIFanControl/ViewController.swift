@@ -92,7 +92,7 @@ class ViewController: NSViewController {
 
     func shellTask(_ args: [String]) -> String {
         let task = Process()
-        guard let path = Bundle.main.path(forResource: "MSIECControl", ofType:"") else {
+        guard let path = Bundle.main.path(forResource: "MSIECControl", ofType: "") else {
             return NSLocalizedString("失败!\nMSIECControl 丢失!", comment: "Error message displayed when MSIECControl fails to load correctly")
         }
         task.launchPath = path
@@ -108,7 +108,7 @@ class ViewController: NSViewController {
 
         return output
     }
-    
+
     override var representedObject: Any? {
         didSet {
         // Update the view, if already loaded.
